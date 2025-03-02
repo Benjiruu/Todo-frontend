@@ -10,9 +10,108 @@ body {
     background: #fff;
     margin: 20px auto; 
     padding: 20px;
-    width: 550px;
+    width: 100%;
+    max-width: 550px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
+}
+
+/* mobiltelefoner testade på Iphone SE och samsung s20 ultra */
+@media (max-width: 480px) {
+    .todoapp {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    #new-todo {
+        padding: 10px 10px 10px 40px;
+        height: 40px;
+        font-size: 18px;
+        width: calc(100% - 50px);
+    }
+
+    #todo-list li {
+        padding: 8px;
+    }
+
+    #footer {
+        padding: 8px;
+        font-size: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #footer #filters {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #clear-completed {
+        margin-top: 10px;
+        white-space: nowrap; 
+        align-self: center; 
+    }
+}
+
+/* surfplattor testade på Ipad pro */
+@media (max-width: 1024px) {
+    .todoapp {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 80px;
+    }
+
+    #new-todo {
+        padding: 12px 12px 12px 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    #todo-list li {
+        padding: 12px;
+    }
+
+    #footer {
+        padding: 12px;
+        font-size: 12px;
+    }
+}
+
+/* datorer */
+@media (min-width: 1025px) {
+    .todoapp {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 100px;
+    }
+
+    #new-todo {
+        padding: 16px 16px 16px 60px;
+        height: 65px;
+        font-size: 24px;
+    }
+
+    #todo-list li {
+        padding: 16px;
+    }
+
+    #footer {
+        padding: 16px;
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 h1 {
@@ -104,6 +203,14 @@ h1 {
     font-size: 14px;
     color: #777;
     border-top: 1px solid #e6e6e6;
+    flex-wrap: wrap;
+}
+
+#filters {
+    display: flex;
+    justify-content: center;
+    width: auto; 
+    flex-grow: 1;
 }
 
 #filters button {
@@ -111,8 +218,8 @@ h1 {
     border: none;
     color: inherit;
     cursor: pointer;
-    margin: 0 5px;
-    padding: 3px 7px;
+    margin: 0 2px;
+    padding: 3px 5px;
     border-radius: 3px;
 }
 
@@ -126,6 +233,8 @@ h1 {
     color: #cc9a9a;
     cursor: pointer;
     padding: 3px 7px;
+    white-space: nowrap;
+    align-self: center;
 }
 
 #clear-completed:hover {
