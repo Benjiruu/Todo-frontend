@@ -60,7 +60,7 @@ body {
 }
 
 /* surfplattor testade på Ipad pro */
-@media (max-width: 1024px) {
+@media (min-width: 768px) {
     .todoapp {
         padding: 15px;
     }
@@ -85,8 +85,8 @@ body {
     }
 }
 
-/* datorer */
-@media (min-width: 1025px) {
+/* datorer/laptop */
+@media (min-width: 992px) {
     .todoapp {
         padding: 20px;
     }
